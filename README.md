@@ -4,7 +4,7 @@
 
 > (In Progress) /ping command to get player ping/
 
-> /playerinfo <player>  - Get info about a player, online or not. Shows position, dimension, ping, uuid, ip
+> (In Progress) /playerinfo <player>  - Get info about a player, online or not. Shows position, dimension, ping, uuid, ip
 
 > /invsee, /endersee  - To view and edit players inventory or enderchest, works on both online or offline players
  
