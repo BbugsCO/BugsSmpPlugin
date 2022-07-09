@@ -16,6 +16,8 @@ commands:
   ping: true
   # invsee and endersee command
   invsee: true
+  # Ban stick
+  banstick: true
 
 # Enable or Disable storing certain information
 log-data:

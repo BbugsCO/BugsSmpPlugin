@@ -48,6 +48,7 @@ public final class BugsSmpPlugin extends JavaPlugin implements Listener {
         pm.registerEvents(new playerAchievementEvent(this), this);
         pm.registerEvents(new playerCommandEvent(this), this);
         pm.registerEvents(new inventoryCloseEvent(this), this);
+        pm.registerEvents(new playerRightClickEntityEvent(this), this);
 
         // register commands
         getCommand("bugssmpreload").setExecutor(new reloadConfig(this));
@@ -58,9 +59,12 @@ public final class BugsSmpPlugin extends JavaPlugin implements Listener {
         getCommand("gms").setExecutor(new gms(this));
 
         getCommand("playerinfo").setExecutor(new playerinfo(this));
+        // TODO: getCommand("ping").setExecutor(new ping(this));
 
         getCommand("invsee").setExecutor(new invsee(this));
         getCommand("endersee").setExecutor(new endersee(this));
+
+        getCommand("banstick").setExecutor(new banstickcmd(this));
     }
 
     @Override

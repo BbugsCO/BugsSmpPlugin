@@ -36,7 +36,7 @@ public class endersee implements CommandExecutor {
                                     sender.sendMessage("Player's inventory does not exist in storage");
                                 } else {
                                     ItemStack[] items = this.plugin.loadEnderInventory(username);
-                                    Inventory inv = Bukkit.createInventory(sendPlayer, 27, title);
+                                    Inventory inv = Bukkit.createInventory(sendPlayer, 45, title);
                                     inv.setContents(items);
                                     sendPlayer.openInventory(inv);
                                 }

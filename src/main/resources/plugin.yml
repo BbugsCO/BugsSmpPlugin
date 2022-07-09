@@ -42,6 +42,10 @@ commands:
     description: Shows player ender chest
     usage: /endersee <player>
     permission: bugs-smp.invsee
+  banstick:
+    description: command to get the ban stick
+    usage: /banstick
+    permission: bugs-smp.banstick
 
 permissions:
   bugs-smp.reload:
@@ -68,4 +72,10 @@ permissions:
   bugs-smp.invsee:
     description: Permission to run /invsee and /endersee
     default: op
+  bugs-smp.banstick:
+    description: Permission to run /banstick
+    default: op
+  bugs-smp.banstick.bypass:
+    description: Can't be affected by ban stick
+    default: false
 
