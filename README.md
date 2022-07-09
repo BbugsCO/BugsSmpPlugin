@@ -10,7 +10,7 @@
  
 > Simple log, easier to read and understand log for player chat, commands, join, leave, etc
 
- 
+> Customizable with config.yml 
  
  
  
