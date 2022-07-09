@@ -11,6 +11,9 @@
 > Simple log, easier to read and understand log for player chat, commands, join, leave, etc
 
  
+ 
+ 
+ 
  config.yml:
 ```yml
  # Bugs SMP Plugin Config
