@@ -1,0 +1,64 @@
+name: BugsSmpPlugin
+version: '${project.version}'
+main: me.bbugsco.bugssmpplugin.BugsSmpPlugin
+api-version: 1.19
+authors: [ BbugsCO ]
+description: plugin for Bugs SMP
+
+commands:
+  bugssmpreload:
+    description: Reloads config for BugsSmpPlugin
+    usage: /bugssmpreload
+    permission: bugs-smp.reload
+  gma:
+    description: Set gamemode adventure
+    usage: /gma
+    permission: bugs-smp.gma
+  gms:
+    description: Set gamemode survival
+    usage: /gms
+    permission: bugs-smp.gms
+  gmt:
+    description: Set gamemode spectator
+    usage: /gmt
+    permission: bugs-smp.gmt
+  gmc:
+    description: Set gamemode creative
+    usage: /gmc
+    permission: bugs-smp.gmc
+  playerinfo:
+    description: Gives certain information about a player
+    usage: /playerinfo <player>
+    permission: bugs-smp.playerinfo
+  invsee:
+    description: Shows player inventory
+    usage: /invsee <player>
+    permission: bugs-smp.invsee
+  endersee:
+    description: Shows player ender chest
+    usage: /endersee <player>
+    permission: bugs-smp.invsee
+
+permissions:
+  bugs-smp.reload:
+    description: Permission to run /bugssmpreload
+    default: op
+  bugs-smp.gma:
+    description: Permission to run /gma
+    default: op
+  bugs-smp.gms:
+    description: Permission to run /gms
+    default: op
+  bugs-smp.gmt:
+    description: Permission to run /gmt
+    default: op
+  bugs-smp.gmc:
+    description: Permission to run /gmc
+    default: op
+  bugs-smp.playerinfo:
+    description: Permission to run /playerinfo
+    default: op
+  bugs-smp.invsee:
+    description: Permission to run /invsee and /endersee
+    default: op
+
