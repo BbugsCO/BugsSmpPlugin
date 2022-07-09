@@ -68,32 +68,21 @@ public final class BugsSmpPlugin extends JavaPlugin implements Listener {
         this.saveDefaultConfig();
         this.ConfigManager.saveCustomConfig();
 
-        String message = "[ServerStop]";
-        this.logMgr.logToFile("bugs-smp", message);
+        this.logMgr.logToFile("bugs-smp", "[ServerStop]");
 
     }
 
-    public void saveCustomConfig() {
-        this.ConfigManager.saveCustomConfig();
-    }
+    public void saveCustomConfig() { this.ConfigManager.saveCustomConfig(); }
 
-    public FileConfiguration getCustomConfig() {
-        return this.ConfigManager.getCustomConfig();
-    }
+    public FileConfiguration getCustomConfig() { return this.ConfigManager.getCustomConfig(); }
 
-    public void log(String filename, String message) {
-        this.logMgr.logToFile(filename, message);
-    }
+    public void log(String filename, String message) { this.logMgr.logToFile(filename, message); }
 
-    public void saveInventory(Inventory inventory, String name) {
-        this.invUtil.saveInventory(inventory, name);
-    }
+    public void saveInventory(Inventory inventory, String name) { this.invUtil.saveInventory(inventory, name); }
 
-    public void saveEnderInventory(Inventory inventory, String name) {this.invUtil.saveEnderInventory(inventory, name); }
+    public void saveEnderInventory(Inventory inventory, String name) { this.invUtil.saveEnderInventory(inventory, name); }
 
-    public ItemStack[] loadInventory(String username) {
-        return this.invUtil.loadInventory(username);
-    }
+    public ItemStack[] loadInventory(String username) { return this.invUtil.loadInventory(username); }
 
     public ItemStack[] loadEnderInventory(String username) { return this.invUtil.loadEnderInventory(username); }
 

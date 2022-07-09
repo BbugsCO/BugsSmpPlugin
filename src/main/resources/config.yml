@@ -28,6 +28,3 @@ log-data:
 logging:
   # Enable simple log file
   simple-log: true
-
-
-

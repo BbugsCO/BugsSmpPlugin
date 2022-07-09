@@ -30,6 +30,10 @@ commands:
     description: Gives certain information about a player
     usage: /playerinfo <player>
     permission: bugs-smp.playerinfo
+  ping:
+    description: Gives ping of given player
+    usage: /ping <player>
+    permission: bugs-smp.ping
   invsee:
     description: Shows player inventory
     usage: /invsee <player>
@@ -57,6 +61,9 @@ permissions:
     default: op
   bugs-smp.playerinfo:
     description: Permission to run /playerinfo
+    default: op
+  bugs-smp.ping:
+    description: Permission to run /ping
     default: op
   bugs-smp.invsee:
     description: Permission to run /invsee and /endersee
