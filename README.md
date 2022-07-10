@@ -5,8 +5,6 @@
 > /ping command to get player ping/
 
 > (In Progress) /playerinfo <player>  - Get info about a player, online or not. Shows position, dimension, ping, uuid, ip
-
-> /invsee, /endersee /armorsee - To view and edit players inventory or enderchest, works on both online or offline players
  
 > Simple log, easier to read and understand log for player chat, commands, join, leave, etc
  
@@ -15,11 +13,8 @@
 > Customizable with config.yml 
  
  
- 
  config.yml:
 ```yml
- # Bugs SMP Plugin Config
-
 # Enable or Disable Features
 commands:
   # Set gamemode survival command
@@ -34,8 +29,10 @@ commands:
   player-info: true
   # Ping command
   ping: true
-  # invsee and endersee command
-  invsee: true
+  # Ban stick
+  banstick: true
+  # Kick Stick
+  kickstick: true
 
 # Enable or Disable storing certain information
 log-data:
