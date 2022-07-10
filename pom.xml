@@ -6,7 +6,7 @@
 
     <groupId>me.bbugsco</groupId>
     <artifactId>bugsSmpPlugin</artifactId>
-    <version>1.0-ALPHA8</version>
+    <version>1.0-ALPHA9</version>
     <packaging>jar</packaging>
 
     <name>BugsSmpPlugin</name>

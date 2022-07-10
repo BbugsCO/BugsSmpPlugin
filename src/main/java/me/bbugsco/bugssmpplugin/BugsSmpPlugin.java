@@ -8,7 +8,6 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.event.Listener;
 
 import org.bukkit.inventory.Inventory;
-import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -46,7 +45,6 @@ public final class BugsSmpPlugin extends JavaPlugin implements Listener {
         pm.registerEvents(new playerChatEvent(this), this);
         pm.registerEvents(new playerAchievementEvent(this), this);
         pm.registerEvents(new playerCommandEvent(this), this);
-        pm.registerEvents(new inventoryCloseEvent(this), this);
         pm.registerEvents(new playerRightClickEntityEvent(this), this);
 
         // register commands
@@ -86,8 +84,4 @@ public final class BugsSmpPlugin extends JavaPlugin implements Listener {
     public void saveInventory(Inventory inventory, String name) { this.invUtil.saveInventory(inventory, name); }
 
     public void saveEnderInventory(Inventory inventory, String name) { this.invUtil.saveEnderInventory(inventory, name); }
-
-    public ItemStack[] loadInventory(String username) { return this.invUtil.loadInventory(username); }
-
-    public ItemStack[] loadEnderInventory(String username) { return this.invUtil.loadEnderInventory(username); }
 }
