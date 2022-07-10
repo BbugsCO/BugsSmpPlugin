@@ -20,7 +20,7 @@ public class invUtil {
 
     public void saveInventory(Inventory inventory, String name) {
         String path = "players." + name + ".inventory.item";
-        for(int i = 0; i < inventory.getSize(); i++) {
+        for(int i = 0; i < 41; i++) {
             ItemStack item = inventory.getItem(i);
             if(item == null) {
                 this.plugin.getCustomConfig().set(path + i, "empty"); // if empty, save empty
@@ -34,7 +34,7 @@ public class invUtil {
 
     public void saveEnderInventory(Inventory inventory, String name) {
         String path = "players." + name + ".enderinventory.item";
-        for(int i = 0; i < inventory.getSize(); i++) {
+        for(int i = 0; i < 27; i++) {
             ItemStack item = inventory.getItem(i);
             if(item == null) {
                 this.plugin.getCustomConfig().set(path + i, "empty"); // if empty, save empty
@@ -94,14 +94,6 @@ public class invUtil {
             ItemStack[] inv = items.toArray(new ItemStack[0]);
             return inv;
         }
-    }
-
-    public void applyInventoryUpdates(Player player) {
-        String username = player.getName();
-        ItemStack[] invItems = loadInventory(username);
-        ItemStack[] enderItems = loadEnderInventory(username);
-        player.getInventory().setContents(invItems);
-        player.getEnderChest().setContents(enderItems);
     }
 }
 

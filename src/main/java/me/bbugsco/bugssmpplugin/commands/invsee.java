@@ -10,6 +10,7 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
 public class invsee implements CommandExecutor {
+
     BugsSmpPlugin plugin;
 
     public invsee(BugsSmpPlugin plugin) {
@@ -25,7 +26,6 @@ public class invsee implements CommandExecutor {
                         if (args.length == 1) {
                             String username = args[0];
                             Player sendPlayer = ((Player) sender).getPlayer();
-                            // When player is online
                             Player player = Bukkit.getPlayerExact(args[0]);
                             if (player == null) {
                                 // When player is offline
@@ -35,7 +35,7 @@ public class invsee implements CommandExecutor {
                                     sender.sendMessage("Player's inventory does not exist in storage");
                                 } else {
                                     ItemStack[] items = this.plugin.loadInventory(username);
-                                    Inventory inv = Bukkit.createInventory(sendPlayer, 45, title);
+                                    Inventory inv = Bukkit.createInventory(sendPlayer, 41, title);
                                     inv.setContents(items);
                                     sendPlayer.openInventory(inv);
                                 }

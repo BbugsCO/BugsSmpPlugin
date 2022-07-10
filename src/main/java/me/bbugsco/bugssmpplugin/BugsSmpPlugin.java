@@ -5,7 +5,6 @@ import me.bbugsco.bugssmpplugin.events.*;
 import me.bbugsco.bugssmpplugin.utils.*;
 
 import org.bukkit.configuration.file.FileConfiguration;
-import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 
 import org.bukkit.inventory.Inventory;
@@ -65,6 +64,7 @@ public final class BugsSmpPlugin extends JavaPlugin implements Listener {
         getCommand("endersee").setExecutor(new endersee(this));
 
         getCommand("banstick").setExecutor(new banstickcmd(this));
+        getCommand("kickstick").setExecutor(new kickstickcmd(this));
     }
 
     @Override
@@ -89,6 +89,4 @@ public final class BugsSmpPlugin extends JavaPlugin implements Listener {
     public ItemStack[] loadInventory(String username) { return this.invUtil.loadInventory(username); }
 
     public ItemStack[] loadEnderInventory(String username) { return this.invUtil.loadEnderInventory(username); }
-
-    public void applyInventoryUpdates(Player player) { this.invUtil.applyInventoryUpdates(player); }
 }

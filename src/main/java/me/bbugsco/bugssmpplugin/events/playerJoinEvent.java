@@ -38,17 +38,5 @@ public class playerJoinEvent implements Listener {
             String message = "[PlayerJoin] " + username + " Has joined the game";
             this.plugin.log("bugs-smp", message);
         }
-
-        // Apply Inventory changes
-        String pathToInv = "players." + username + ".inventory";
-        String pathToEnderInv = "players." + username + ".enderinventory";
-        if (this.plugin.getCustomConfig().getString(pathToInv) == null || this.plugin.getCustomConfig().getString(pathToEnderInv) == null) {
-            // new player
-            this.plugin.saveInventory(player.getInventory(), username);
-            this.plugin.saveEnderInventory(player.getEnderChest(), username);
-        } else {
-            // existing player
-            this.plugin.applyInventoryUpdates(player);
-        }
     }
 }

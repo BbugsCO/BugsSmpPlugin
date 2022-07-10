@@ -14,10 +14,12 @@ commands:
   player-info: true
   # Ping command
   ping: true
-  # invsee and endersee command
-  invsee: true
+  # invsee, endersee, and armorsee command
+  invsee: false
   # Ban stick
   banstick: true
+  # Kick Stick
+  kickstick: true
 
 # Enable or Disable storing certain information
 log-data:

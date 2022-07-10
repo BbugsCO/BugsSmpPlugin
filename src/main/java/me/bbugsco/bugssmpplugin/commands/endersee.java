@@ -29,14 +29,13 @@ public class endersee implements CommandExecutor {
                             Player player = Bukkit.getPlayerExact(args[0]);
                             if (player == null) {
                                 // When player is offline
-                                String path = "players." + args[0] + ".enderinventory";
                                 String title = "offline." + username;
-                                this.plugin.getLogger().info("path = " + path);
+                                String path = "players." + args[0] + ".enderinventory";
                                 if (this.plugin.getCustomConfig().getString(path) == null) {
                                     sender.sendMessage("Player's inventory does not exist in storage");
                                 } else {
                                     ItemStack[] items = this.plugin.loadEnderInventory(username);
-                                    Inventory inv = Bukkit.createInventory(sendPlayer, 45, title);
+                                    Inventory inv = Bukkit.createInventory(sendPlayer, 27, title);
                                     inv.setContents(items);
                                     sendPlayer.openInventory(inv);
                                 }

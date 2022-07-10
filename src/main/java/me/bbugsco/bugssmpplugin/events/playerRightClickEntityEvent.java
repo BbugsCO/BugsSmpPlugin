@@ -14,6 +14,7 @@ import org.bukkit.event.player.PlayerInteractAtEntityEvent;
 import java.util.UUID;
 
 public class playerRightClickEntityEvent implements Listener {
+
     BugsSmpPlugin plugin;
 
     public playerRightClickEntityEvent(BugsSmpPlugin plugin) {
@@ -29,7 +30,15 @@ public class playerRightClickEntityEvent implements Listener {
             if (!clickedPlayer.hasPermission("bugs-smp.banstick.bypass")) {
                 if (player.getGameMode() == GameMode.CREATIVE) {
                     clickedPlayer.banPlayer("bye bye");
-                    clickedPlayer.banPlayerIP("bye bye");
+                }
+            }
+        }
+        if (event.getRightClicked().getType().equals(EntityType.PLAYER) && player.getInventory().getItemInMainHand().getEnchantmentLevel(Enchantment.FIRE_ASPECT) == 69) {
+            UUID uuid = event.getRightClicked().getUniqueId();
+            Player clickedPlayer = Bukkit.getPlayer(uuid);
+            if (!clickedPlayer.hasPermission("bugs-smp.kickstick.bypass")) {
+                if (player.getGameMode() == GameMode.CREATIVE) {
+                    clickedPlayer.kickPlayer("nerd");
                 }
             }
         }
