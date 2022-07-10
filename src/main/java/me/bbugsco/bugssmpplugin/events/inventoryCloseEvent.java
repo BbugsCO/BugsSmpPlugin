@@ -16,12 +16,9 @@ public class inventoryCloseEvent implements Listener {
 
     @EventHandler
     public void onInventoryClose(InventoryCloseEvent event) {
-        Inventory inv = event.getInventory();
-        if (event.getPlayer() == null) {
-            // no
-        } else {
-            this.plugin.saveInventory(inv, event.getPlayer().getName());
-            this.plugin.saveEnderInventory(inv, event.getPlayer().getName());
-        }
+                Inventory inv = event.getInventory();
+                this.plugin.saveInventory(inv, event.getPlayer().getName());
+                this.plugin.saveEnderInventory(inv, event.getPlayer().getName());
+
     }
 }
