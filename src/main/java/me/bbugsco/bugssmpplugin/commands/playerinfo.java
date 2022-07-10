@@ -1,6 +1,7 @@
 package me.bbugsco.bugssmpplugin.commands;
 
 import me.bbugsco.bugssmpplugin.BugsSmpPlugin;
+import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -20,7 +21,17 @@ public class playerinfo implements CommandExecutor {
             if (command.getName().equalsIgnoreCase("playerinfo")) {
                 if (sender instanceof Player) {
                     if (sender.hasPermission("bugs-smp.playerinfo")) {
-                        sender.sendMessage("This is currently useless");
+                        if (args.length == 1) {
+                            Player player = Bukkit.getPlayerExact(args[0]);
+                            if (player.isOnline()) {
+                                // online
+                            } else {
+                                // offline
+                            }
+                        } else {
+                            sender.sendMessage("Not enough arguments: usage /playerinfo <username>");
+                        }
+                        }
                     } else {
                         this.plugin.getLogger().info("You do not have permission to run this command");
                     }
@@ -29,7 +40,6 @@ public class playerinfo implements CommandExecutor {
                     sender.sendMessage("Cannot execute command from console");
                 }
             }
-        }
         else {
             sender.sendMessage("Command is disabled, to enable it, change playerinfo value to true in config.yml");
         }

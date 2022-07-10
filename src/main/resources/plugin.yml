@@ -34,18 +34,6 @@ commands:
     description: Gives ping of given player
     usage: /ping <player>
     permission: bugs-smp.ping
-  invsee:
-    description: Shows player inventory
-    usage: /invsee <player>
-    permission: bugs-smp.invsee
-  endersee:
-    description: Shows player ender chest
-    usage: /endersee <player>
-    permission: bugs-smp.invsee
-  armorsee:
-    description: Shows player ender chest
-    usage: /armorsee <player>
-    permission: bugs-smp.invsee
   banstick:
     description: command to get the ban stick
     usage: /banstick
@@ -77,18 +65,21 @@ permissions:
   bugs-smp.ping:
     description: Permission to run /ping
     default: op
-  bugs-smp.invsee:
-    description: Permission to run /invsee and /endersee
-    default: op
   bugs-smp.banstick:
     description: Permission to run /banstick
     default: op
   bugs-smp.banstick.bypass:
     description: Can't be affected by ban stick
     default: false
+  bugs-smp.banstick.use:
+      description: Permission to use ban stick
+      default: op
   bugs-smp.kickstick:
     description: Permission to run /kickstick
     default: op
   bugs-smp.kickstick.bypass:
       description: Can't be affected by kick stick
       default: false
+  bugs-smp.kickstick.use:
+    description: Permission to use kick stick
+    default: op

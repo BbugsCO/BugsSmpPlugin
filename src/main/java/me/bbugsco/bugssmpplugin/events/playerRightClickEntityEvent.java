@@ -3,7 +3,6 @@ package me.bbugsco.bugssmpplugin.events;
 import me.bbugsco.bugssmpplugin.BugsSmpPlugin;
 
 import org.bukkit.Bukkit;
-import org.bukkit.GameMode;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
@@ -28,7 +27,7 @@ public class playerRightClickEntityEvent implements Listener {
             UUID uuid = event.getRightClicked().getUniqueId();
             Player clickedPlayer = Bukkit.getPlayer(uuid);
             if (!clickedPlayer.hasPermission("bugs-smp.banstick.bypass")) {
-                if (player.getGameMode() == GameMode.CREATIVE) {
+                if (player.hasPermission("bugs-smp.banstick.use")) {
                     clickedPlayer.banPlayer("bye bye");
                 }
             }
@@ -37,7 +36,7 @@ public class playerRightClickEntityEvent implements Listener {
             UUID uuid = event.getRightClicked().getUniqueId();
             Player clickedPlayer = Bukkit.getPlayer(uuid);
             if (!clickedPlayer.hasPermission("bugs-smp.kickstick.bypass")) {
-                if (player.getGameMode() == GameMode.CREATIVE) {
+                if (player.hasPermission("bugs-smp.kickstick.use")) {
                     clickedPlayer.kickPlayer("nerd");
                 }
             }

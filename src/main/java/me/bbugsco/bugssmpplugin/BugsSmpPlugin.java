@@ -58,13 +58,14 @@ public final class BugsSmpPlugin extends JavaPlugin implements Listener {
         getCommand("gms").setExecutor(new gms(this));
 
         getCommand("playerinfo").setExecutor(new playerinfo(this));
-        // TODO: getCommand("ping").setExecutor(new ping(this));
-
-        getCommand("invsee").setExecutor(new invsee(this));
-        getCommand("endersee").setExecutor(new endersee(this));
+        getCommand("ping").setExecutor(new ping(this));
 
         getCommand("banstick").setExecutor(new banstickcmd(this));
         getCommand("kickstick").setExecutor(new kickstickcmd(this));
+
+        // TODO: Lightning rod
+        // TODO: Tool break sound
+        // TODO: Elder Guardian Jump Scare
     }
 
     @Override

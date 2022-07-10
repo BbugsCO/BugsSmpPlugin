@@ -14,8 +14,6 @@ commands:
   player-info: true
   # Ping command
   ping: true
-  # invsee, endersee, and armorsee command
-  invsee: false
   # Ban stick
   banstick: true
   # Kick Stick
